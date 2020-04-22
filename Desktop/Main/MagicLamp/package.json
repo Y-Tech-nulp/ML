@@ -1,0 +1,15 @@
+{
+  "name": "magiclamp",
+  "version": "1.0.0",
+  "description": "App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Oleksii",
+  "license": "ISC",
+  "dependencies": {
+    "electron-packager": "^14.2.1",
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
