@@ -1,0 +1,812 @@
+*{
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body{
+  display: block;
+
+  min-height: 100vh;
+  background-size: 200%;
+  transition: .5s; 
+
+  background: linear-gradient(182deg, #8c0da8, #5d3fff);
+  background-size: 600% 600%;
+  
+  -webkit-animation: AnimationName 11s ease infinite;
+  -moz-animation: AnimationName 11s ease infinite;
+  -o-animation: AnimationName 11s ease infinite;
+  animation: AnimationName 11s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+
+/* Header */
+.header {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  background-color: #111111;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header_position {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin: 0px 20px 0px 20px;
+}
+
+
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  margin: 0 15px;
+  font-family: "Myriad Pro";
+  text-transform: uppercase;
+  
+}
+
+.nav_link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s linear;
+  font-family: "Myriad Pro";
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 3px 15px 0 0;
+  text-transform: uppercase;
+
+}
+
+/* Header ends */
+
+
+
+.block_in_container {
+  width: 1200px;
+  height: 500px;
+  background-color: #fff;
+
+  border-radius: 10px;
+
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+#tabs{
+  overflow: auto; 
+  width: 100%;
+  margin: 0;
+  padding: 0px 0px 50px 0px;
+  list-style: none;
+}
+ 
+#tabs li{
+  float: left;
+  margin: 0 -2.5em 0 3px;
+}
+
+  .tab1,.tab2,.tab3,.tab4,.tab5,.tab6 {
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 190px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 2px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: .3s;
+
+  }
+  
+  #tabs a:hover {
+    color: white;
+    transform: translateY(-7px);
+    background: linear-gradient(90deg, #07ff82, #12d372, #01a452, #007e00);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 4s ease infinite;
+    -moz-animation: AnimationName 4s ease infinite;
+    -o-animation: AnimationName 4s ease infinite;
+    animation: AnimationName 4s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+  }
+
+
+  #tabs a:focus{
+    outline: 0;
+  }
+   
+     
+  #tabs #current a,
+  #tabs #current a::after{
+    z-index: 3;
+    background: linear-gradient(90deg, #07ff82, #12d372, #01a452, #007e00);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 4s ease infinite;
+    -moz-animation: AnimationName 4s ease infinite;
+    -o-animation: AnimationName 4s ease infinite;
+    animation: AnimationName 4s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+  }
+
+  #content
+{
+    background: #fff;
+    padding: 15px;
+	  position: relative;
+	  z-index: 2;	
+    -moz-border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;
+    border-radius: 0 5px 5px 5px;
+    -moz-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    box-shadow: 0 -11px 0px -10px rgba(0, 0, 0, .5);
+}
+ 
+#content h2, #content h3, #content p
+{
+    margin: 0 0 15px 0;
+}
+ 
+#about
+{
+    color: #999;
+}
+ 
+#about a
+{
+    color: #eee;
+}
+
+
+/* Добавляємо функціонал в кнопки */
+
+/* Яскравість початок */
+.slidecontainer {
+  width: 100%;
+  max-width: 900px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Яскравість кінець */
+
+/* Календар початок */
+
+ul {
+  list-style-type: none;
+}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(92deg, #1ed700, #f9f9f9);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 2s ease infinite;
+    -moz-animation: AnimationName 2s ease infinite;
+    animation: AnimationName 2s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 41%}
+        50%{background-position:100% 60%}
+        100%{background-position:0% 41%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 41%}
+        50%{background-position:100% 60%}
+        100%{background-position:0% 41%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 41%}
+        50%{background-position:100% 60%}
+        100%{background-position:0% 41%}
+    }
+}
+
+.mon {
+  color:black;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
+
+/* Календар адаптивність */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+/* Календар кінець */
+
+/* Будильник початок */
+
+
+#ctime, #tpick {
+  font-family: 'Montserrat', sans-serif;
+}
+.hat {
+  text-align: center;
+  font-weight: normal;
+  margin: 5px 0 10px 0;
+}
+
+.ergo {
+  color:#fff;
+}
+
+#ctime {
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  background: linear-gradient(122deg, #016dea, #ea0101);
+  background-size: 400% 400%;
+  
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 40%}
+      50%{background-position:100% 61%}
+      100%{background-position:0% 40%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 40%}
+      50%{background-position:100% 61%}
+      100%{background-position:0% 40%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 40%}
+      50%{background-position:100% 61%}
+      100%{background-position:0% 40%}
+  }
+}
+#ctime .hat {
+  color: black;
+}
+#ctime .square {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+}
+#ctime .digits {
+  font-size: 24px;
+  background: #fff;
+  color: #000;
+  padding: 20px 10px;
+  border-radius: 15px;
+}
+#ctime .text {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+
+#tpick {
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 10px;
+  border-radius: 15px;
+  background: #f2f2f2;
+  white-space: nowrap;
+
+}
+#tpick-h, #tpick-m, #tpick-s {
+  display: inline-block;
+  width: 32%;
+  
+}
+
+#tpick select {
+  box-sizing: padding-box;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0;
+
+
+}
+#tset, #treset {
+  box-sizing: padding-box;
+  width: 50%;
+  border-radius: 15px;
+  background: #e6092e;
+  color: #fff;
+  padding: 10px;
+  border: 0;
+  cursor: pointer;
+}
+#tset:disabled, #treset:disabled {
+  background: rgb(9, 177, 59);
+  color: #fff;
+}
+
+#tpick select {
+  border-radius: 15px;
+  border-width: 3px;
+  border-color: rgb(102, 106, 168);
+}
+
+
+/* Будильник кінець */
+
+/* Колір початок */
+
+#fucking_buttons {
+  overflow: auto;
+  width: 100%;
+  margin: 0;
+  padding: 30px 0px 27px 150px;
+  list-style: none;
+}
+ 
+#fucking_buttons li{
+  float: left;
+  margin: 0 2.5em 0 0;
+}
+
+#fucking_buttons a:focus{
+  outline: 0;
+}
+
+
+/*Тут починаєтсья Їботня з переливанням кнопок */
+
+.red-butt:hover {
+  transform: translateY(-7px);
+  background: linear-gradient(90deg, #ff0000, #ffffff);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 7s ease infinite;
+  -moz-animation: AnimationName 7s ease infinite;
+  -o-animation: AnimationName 7s ease infinite;
+  animation: AnimationName 7s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+  @-o-keyframes AnimationName {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+}
+
+#fucking_buttons #current .red-butt,
+  #fucking_buttons #current .red-butt::after {
+    z-index: 3;
+    background: linear-gradient(90deg, #ff0000, #ffffff);
+    background-size: 400% 400%;
+  
+    -webkit-animation: AnimationName 7s ease infinite;
+    -moz-animation: AnimationName 7s ease infinite;
+    -o-animation: AnimationName 7s ease infinite;
+    animation: AnimationName 7s ease infinite;
+  
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+  }
+
+  .yellow-butt:hover {
+    transform: translateY(-7px);
+    background: linear-gradient(90deg, #deff00, #ffffff);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 7s ease infinite;
+    -moz-animation: AnimationName 7s ease infinite;
+    -o-animation: AnimationName 7s ease infinite;
+    animation: AnimationName 7s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 51%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 51%}
+    }
+  }
+
+#fucking_buttons #current .yellow-butt,
+#fucking_buttons #current .yellow-butt::after {
+  background: linear-gradient(90deg, #deff00, #ffffff);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 7s ease infinite;
+  -moz-animation: AnimationName 7s ease infinite;
+  -o-animation: AnimationName 7s ease infinite;
+  animation: AnimationName 7s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+  @-o-keyframes AnimationName {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 51%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 51%}
+  }
+}
+
+.blue-butt:hover {
+  transform: translateY(-7px);
+  background: linear-gradient(91deg, #1216aa, #ffffff);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+
+}
+
+#fucking_buttons #current .blue-butt,
+#fucking_buttons #current .blue-butt::after {
+  z-index: 3;
+    background: linear-gradient(91deg, #1216aa, #ffffff);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+
+}
+
+.green-butt:hover {
+  transform: translateY(-7px);
+  background: linear-gradient(91deg, #06e404, #ffffff);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+}
+
+#fucking_buttons #current .green-butt,
+#fucking_buttons #current .green-butt::after {
+  background: linear-gradient(91deg, #06e404, #ffffff);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+
+}
+
+/*Тут закінчується Їботня з переливанням кнопок */
+
+
+.red-butt ,.blue-butt,
+.yellow-butt, .green-butt  {
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  border-radius: 50px !important;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 2px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  transition: .3s;
+  
+}
+
+/* Колір кінець */
+

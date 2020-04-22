@@ -1,0 +1,220 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  box-sizing: border-box;
+}
+
+body{
+
+  min-height: 100vh;
+  background-size: 200%;
+  transition: .5s; 
+
+  background: linear-gradient(182deg, #8c0da8, #5d3fff);
+  background-size: 600% 600%;
+  
+  -webkit-animation: AnimationName 11s ease infinite;
+  -moz-animation: AnimationName 11s ease infinite;
+  -o-animation: AnimationName 11s ease infinite;
+  animation: AnimationName 11s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+ .menu-overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+
+.menu-overlay.active {
+  background-color: rgba(0,0,0,.7);
+  pointer-events: all;
+}
+
+.menu { 
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  transition: all .5s;
+  transform: scale(0);
+}
+
+.menu-overlay.active .menu {
+  transform: scale(1);
+
+}
+
+.menu li a{
+  display: block;
+  font-size: 3em;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  transition: .5s;
+}
+
+.menu li a:hover {
+  color: #e95787;
+  background-color: rgba(255,255,255, .2);
+}
+ 
+#toggle-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px; 
+  background-color: #f44336;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  transition: .5s;
+}
+
+#toggle-icon i{
+  width: 100%;
+  padding: 10px;
+} 
+
+#toggle-icon:hover {
+  background-color: #b71c1c;
+}
+
+/* Header ends */
+
+
+/* Login STARTS */
+.login-form {
+  width: 100%;
+  max-width: 360px;
+  background: #f1f1f1;
+  height: 100%;
+  max-height: 580px;
+  padding: 80px 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.login-form h1{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.txtb{
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+
+.txtb input{
+  font-size: 15px;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+ .txtb span::before{
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: .5s;
+}
+
+ .txtb span::after{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(120deg,#3498db, #8e44ad);
+  transition: .5s;
+  /* Fics 1 */
+  top: 100%;
+  left: 0; 
+}  
+
+.focus + span::before{
+  top: -5px;
+
+}
+.focus + span::after{
+  width: 100%;
+  /* Fics for Chrome */
+  translate: (-100px,40px);
+  /* Fics 3 */
+  top: 100%;
+  left: 0; 
+}
+
+.logbtn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(120deg, #3498db, #8e44ad, #3498db);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.logbtn:hover{
+  background-position: right;
+}
+
+.bottom-text{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* LOGIN ENDS */

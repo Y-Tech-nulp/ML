@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Особистий кабінет</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <div class="container">
+
+       <!-- Header starts -->
+      <header class="header">
+        <div class="container">
+          <div class="header_position">
+            <div class="logo">
+              magic lamp
+            </div>
+            <nav class="begin">
+              <a class="nav_link" href="#">Особистий кабінет</a>
+              <a class="nav_link" href="#">faq</a>
+              <a class="nav_link" href="#">вихід</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+  <!-- Header ends -->
+
+      <div class="block_in_container">
+        <ul id="tabs">
+          <li><a href="#" title="tab1" class="tab1">Колір</a></li>
+          <li><a href="#" title="tab2" class="tab2">Будьльник</a></li>
+          <li><a href="#" title="tab3" class="tab3">Яскравість</a></li>
+          <li><a href="#" title="tab4" class="tab4">Календар</a>
+          <li><a href="#" title="tab5" class="tab5">В розробці...</a></li>
+          <li><a href="#" title="tab6" class="tab6">В розробці...</a></li>
+          </ul>
+        <div id="content">
+
+          <!-- Колір початок -->
+          <div id="tab1">
+            <ul id="fucking_buttons">
+              <li><a href="#" class="red-butt">Червоний</a></li>
+              <li><a href="#" class="yellow-butt">Жовтий</a></li>
+              <li><a href="#" class="blue-butt">Синій</a></li>
+              <li><a href="#" class="green-butt">Зелений</a></li>
+            </ul>
+          </div>
+          <!-- Колір кінець -->
+
+          <!-- Будильник початок -->
+          <div id="tab2">
+
+    <div id="ctime">
+      <h1 class="hat"><span class="ergo">
+        Точний час
+      </span></h1>
+      <div class="square">
+        <div class="digits" id="chr">00</div>
+        <div class="text">Години</div>
+      </div>
+      <div class="square">
+        <div class="digits" id="cmin">00</div>
+        <div class="text">Хвилини</div>
+      </div>
+      <div class="square">
+        <div class="digits" id="csec">00</div>
+        <div class="text">Секунди</div>
+      </div>
+    </div>
+
+
+    <div id="tpick">
+      <h1 class="hat">
+        Завести Будильник
+      </h1>
+      <div id="tpick-h"></div>
+      <div id="tpick-m"></div>
+      <div id="tpick-s"></div>
+      <div>
+        <input type="button" value="Наставити" id="tset"/>
+        <input type="button" value="Скинути" id="treset" disabled/>
+      </div>
+    </div>
+
+    <audio id="alarm-sound" loop>
+      <source src="wake-up-sound.mp3" type="audio/mp3">
+    </audio>
+
+          </div>
+            
+          <!-- Будильник кінець -->
+
+          <!-- Яскравість початок -->
+          <div id="tab3"  class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p>Рівень: <span id="demo"></span></p>
+          </div>
+          <!-- Яскравість кінець  -->
+
+          <!-- Календар початок -->
+          <div id="tab4">
+            <div class="month">      
+              <ul>
+                <li class="prev">❮</li>
+                <li class="next">❯</li>
+                <li>
+                  <span class="mon">Квітень</span><br>
+                  <span style="font-size:18px" class="mon">2020</span>
+                </li>
+              </ul>
+            </div>
+            
+            <ul class="weekdays">
+              <li>Пон</li>
+              <li>Вів</li>
+              <li>Сер</li>
+              <li>Чет</li>
+              <li>Пт</li>
+              <li>Суб</li>
+              <li>Нед</li>
+            </ul>
+            
+            <ul class="days">  
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
+              <li>11</li>
+              <li>12</li>
+              <li>13</li>
+              <li>15</li>
+              <li>15</li>
+              <li>16</li>
+              <li>17</li>
+              <li>18</li>
+              <li>19</li>
+              <li>20</li>
+              <li>21</li>
+              <li><span class="active">22</span></li>
+              <li>23</li>
+              <li>24</li>
+              <li>25</li>
+              <li>26</li>
+              <li>27</li>
+              <li>28</li>
+              <li>29</li>
+              <li>30</li>
+              <li>31</li>
+            </ul>
+          </div>
+          <!-- Календар кінець -->
+
+          <div id="tab5">В розробці...</div>
+          <div id="tab6">В розробці...</div>
+        </div>
+      </div>
+    </div>
+
+  <script src="for_alarm_clock.js"></script>
+  <script src="app.js"></script>
+  <script src="another_script.js"></script>
+  <script src="activeButton.js"></script>
+
+
+</body>
+</html>
