@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111111;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding-top: 10px;
+  background-color: #111111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header_position {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Myriad Pro";
+  text-transform: uppercase;
+  
+}
+
+
+.nav_link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s linear;
+  font-family: "Myriad Pro";
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  position: relative;
+
+}
+
+/* Scrolling */
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:  #111111;
+  animation-name: show_header;
+  animation-duration: 1s;
+
+} 
+
+@keyframes show_header {
+  0% {
+    opacity: 0;
+    top:-70;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+/* Header ends */
+
+/* Intro */
+
+.intro {
+
+  width: 100%;
+  height: 100vh;
+
+  -webkit-background-size: cover; 
+  background-size: cover;
+
+  background: linear-gradient(182deg, #8c0da8, #5d3fff);
+  background-size: 600% 600%;
+  
+  -webkit-animation: AnimationName 7s ease infinite;
+  -moz-animation: AnimationName 7s ease infinite;
+  -o-animation: AnimationName 7s ease infinite;
+  animation: AnimationName 7s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:88% 0%}
+  50%{background-position:13% 100%}
+  100%{background-position:88% 0%}
+}
+
+/* Intro ends */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clock {
+  line-height: 1;
+  margin: 100px 0;
+  text-align: center; 
+}
+
+.Y-Tech-adaptive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+ 
+/* About lamp */
+
+.intro-2 {
+  width: 100%;
+  height: 700px;
+}
+.container-2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title_1 {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Myriad Pro";
+  padding-bottom: 0px;
+}
+
+.title_2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Myriad Pro";
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 25px;
+
+}
+
+/* Полоска */
+.title_2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: red;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.text_aboutUs {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Myriad Pro";
+  color: rgb(153, 153, 153);
+  padding-top: 45px; 
+}
+
+/* Pictures Start */
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+.about_item {
+  width: 30%;
+  height: 50px;
+}
+
+.about_item:hover .about_img {
+  transform: translate3d(-10px, -10px,0);
+}
+
+.about_item:hover .about_img img {
+  opacity: 0.7s;
+}
+
+.about_img {
+  transition: transform .2s linear;
+}  
+
+.about_img img {
+  display: block;
+}
+
+.img-adaptive {
+  height: 250px;
+  width: 100%;
+}
+
+/* Pictures end */
+/* About Lamp Ends */
+
+/* Footer starts */
+.footer {
+  background-color: #fff;
+  height: 25px;
+}
+
+.container-3 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.some_1 , .some_2, .some_3, .some_4 {
+  font-size: 15px;
+} 
