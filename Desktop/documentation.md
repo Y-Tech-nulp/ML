@@ -84,4 +84,5 @@ myNotification.onclick = () => {
   console.log('Notification clicked')
 }
 	-функція для створення можливості сповіщень;
-	```
+
+```
