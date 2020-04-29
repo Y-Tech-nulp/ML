@@ -23,6 +23,7 @@
     - `edited_channel_post_caption` - старий текст повідомлення
 1. `polling_error`: помилка в пулі
 1. `error`: непередбачевана помилка!
+
 Приклад обробки повідомлень
 ```js
 bot.onText(/\/start/, function (msg, match) {
