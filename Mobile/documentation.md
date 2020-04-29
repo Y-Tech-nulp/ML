@@ -1,7 +1,8 @@
 Всі методи використовують спеціальні бібліотеки AppInventor-JavaLibrary.
 
-При запуску Android додатку "Magic Lamp" кнопки вмикання/вимикання (Button1, Вutton2) приховані 
-Через функції 
+При запуску Android додатку "Magic Lamp" кнопки вмикання/вимикання (Button1, Вutton2) приховані.
+
+За них відповідають функції `Visible`
 ```java
 Button1.Visible(false); // вимкнення кнопки #1  
 Button2.Visible(false); // викнення кнопки #2
