@@ -2,6 +2,7 @@
 
 * [Події](#events)
 * [Надсилання файлів](#sending-files)
+* [Надсилання повідомлень](#sending-text)
 
 <a name="events"></a>
 ## Події
@@ -22,7 +23,22 @@
     - `edited_channel_post_caption` - старий текст повідомлення
 1. `polling_error`: помилка в пулі
 1. `error`: непередбачевана помилка!
-
+Приклад обробки повідомлень
+```js
+bot.onText(/\/start/, function (msg, match) {
+    bot.sendMessage(msg.from.id, 
+                    "Привіт, я - бот від Y-Tech.\n"
+                    +"Я допоможу тобі в управлінні твоєю лампою, поїхали?"
+                   );
+    return;
+});
+```
+Або
+```js
+bot.on('message', function (msg) {
+    bot.sendMessage(msg.from.id, "Привіт!");
+});
+```
 <a name="sending-files"></a>
 ## Надсилання файлів
 
@@ -51,4 +67,10 @@ bot.sendAudio(chatId, fileId);
 ```js
 const url = 'https://telegram.org/img/t_logo.png';
 bot.sendPhoto(chatId, url);
+```
+<a name="sending-text"></a>
+## Надсилання повідомлення
+Надсилання звичайного повідомлення
+```js
+bot.sendMessage(ID, TEXT);
 ```
