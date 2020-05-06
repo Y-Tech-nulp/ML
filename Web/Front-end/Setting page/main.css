@@ -127,18 +127,16 @@ body{
 
 #tabs li{
   float: left;
-  margin: -10px -69px -10px 20px !important;
+  margin: -10px -60px -10px 20px !important;
   
 }
 
-.tab1 { /* Для розташування  */
+.tab1 { 
   border-radius: 10px 0 0 0 !important;
 }
 
-.tab6 { /* Для розташування  */
+.tab4 { 
   border-radius: 0 10px 0 0 !important;
-  width: 205px !important; /*Не можна цій вкладці задавати більше,я сер-
-  йозно все нафіг рушиться*/
 }
 
   .tab1,.tab2,.tab3,.tab4,.tab5,.tab6 {
@@ -146,7 +144,7 @@ body{
     text-align:center;
     outline: none;
     display: inline-block;
-    width: 208px;
+    width: 300px;
     height: 60px;
     line-height: 45px;
     border-radius: 2px;
@@ -448,9 +446,9 @@ ul {
 
 #ctime {
   margin: 0 auto;
+  border-radius: 15px 15px 0 0;
   max-width: 350px;
   padding: 10px;
-  border-radius: 15px;
   text-align: center;
   background: linear-gradient(122deg, #016dea, #ea0101);
   background-size: 400% 400%;
@@ -488,7 +486,7 @@ ul {
   background: #fff;
   color: #000;
   padding: 20px 10px;
-  border-radius: 15px;
+
 }
 #ctime .text {
   margin-top: 10px;
@@ -497,10 +495,10 @@ ul {
 
 
 #tpick {
+  border-radius: 0 0 15px 15px;
   margin: 0 auto;
   max-width: 350px;
   padding: 10px;
-  border-radius: 15px;
   background: #f2f2f2;
   white-space: nowrap;
 
