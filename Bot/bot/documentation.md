@@ -3,6 +3,7 @@
 * [Події](#events)
 * [Надсилання файлів](#sending-files)
 * [Надсилання повідомлень](#sending-text)
+* [Функції](#function)
 
 <a name="events"></a>
 ## Події
@@ -75,3 +76,10 @@ bot.sendPhoto(chatId, url);
 ```js
 bot.sendMessage(ID, TEXT);
 ```
+
+<a name="function"></a>
+## Перевірка авторизації
+```js
+getAuth(user_id); // при авторизації повертає true, в інших випадках false
+```
+
