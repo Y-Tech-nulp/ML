@@ -162,12 +162,15 @@ bot.on('callback_query', async function (msg) {
             break;
         };
         case 'set_brightness': {
-            bot.sendMessage(msg.from.id, "Виберіть колір",{
+            if(getAuth(msg.from.id) == false) return;
+            bot.sendMessage(msg.from.id, "Виберіть доступну яскравість:",{
                 reply_markup: JSON.stringify({
                     inline_keyboard: [
-                        [{text: "Білий", callback_data: 'set_color_white'},{text: "Червоний", callback_data: 'set_color_red'},{text: "Зелений", callback_data: 'set_color_green'}],
-                        [{text: "Жовтий", callback_data: 'set_color_yellow'},{text: "Синій", callback_data: 'set_color_blue'},{text: "Оранжевий", callback_data: 'set_color_orange'}],
-                        [{text: "Ефект «Fade»", callback_data: 'set_color_fade'},{text: "Ефект «Gradient»", callback_data: 'set_color_blue'}],
+                        [{text: "0%", callback_data: 'set_brightness_0'}],
+                        [{text: "10%", callback_data: 'set_brightness_10'},{text: "20%", callback_data: 'set_brightness_20'},{text: "30%", callback_data: 'set_brightness_30'}],
+                        [{text: "40%", callback_data: 'set_brightness_40'},{text: "50%", callback_data: 'set_brightness_50'},{text: "60%", callback_data: 'set_brightness_60'}],
+                        [{text: "70%", callback_data: 'set_brightness_70'},{text: "80%", callback_data: 'set_brightness_80'},{text: "90%", callback_data: 'set_brightness_90'}],
+                        [{text: "100%", callback_data: 'set_brightness_100'}],
                         [{text: "Меню", callback_data: 'menu'}]
                     ]
                 })
@@ -175,17 +178,23 @@ bot.on('callback_query', async function (msg) {
             break;
         };
         default: {
+            if(msg.data.search('set_brightness_') > -1) {
+                if(getAuth(msg.from.id) == false) return;
+                let data = msg.data.match(/set\_brightness\_([^]+)/)[1];
+                bot.sendMessage(msg.from.id, "Ви вибрали яскравість "+data+"%")
+                return;
+            }
             bot.sendMessage(msg.from.id, "В розробці.");
             break;
-        }
-    }
+        };
+    };
     return;
 });
 
 var getAuth = (user) => {
     let status = true;
     if(test_mode_users.indexOf(user) == -1) {
-        bot.sendMessage(user, "Ви не додали лампу!\nНатисність кнопку «додати лампу», щоб авторизуватись",{
+        bot.sendMessage(user, "Ви не додали лампу!\nНатисність кнопку «додати лампу», щоб авторизуватись", {
                 reply_markup: JSON.stringify({
                     inline_keyboard: [
                         [{text: "Додати лампу", callback_data: 'add'}]
