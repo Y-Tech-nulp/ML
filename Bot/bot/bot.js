@@ -1,5 +1,5 @@
 const TgBot = require('node-telegram-bot-api'),
-      token = "1180139988:AAHqK0UqszqI04eibuMAyXU_qXuHnTmTI0w",
+      token = "***",
       bot = new TgBot(token, {polling: true});
 
 const Promise = require('bluebird');
